@@ -61,8 +61,7 @@ body {
   margin-right: 50px;
 }
 
-
-/* Блочна модель */
+/* Header */
 .header-nav .link {
   display: block;
   padding-top: 32px;
@@ -87,9 +86,8 @@ body {
 .header-contacts {
   display: flex;
   margin-left: auto;
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
+  align-items: center;
+  }
 .header-mail {
   margin-right: 30px;
 }
@@ -105,20 +103,15 @@ body {
   text-decoration: none;
 }
 .contacts-icon {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  fill: var(--paragraph-text-color);
+  fill: currentColor;
   margin-right: 10px;
 }
 .contacts-link:hover, :focus {
   color: var(--accent-text-color);
 }
-.contacts-icon:hover, :focus {
-  fill: var(--accent-text-color)
-}
-/* .header-phone:hover::before {
-  color: green;
-} */
+
 /* Main-nav */
 .header-bord {
  width: 1600px;
@@ -143,12 +136,17 @@ body {
   padding-bottom: 200px; */
 }
 .back-photo {
+  /* height: 600px; */
   height: 600px;
-  background-color: #2F303A 40 %;
-  background-size: contain;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  /* background-color: #2F303A 40 %; */
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url(../images/header-photo.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+   url(../images/header-photo.jpg);
   }
 
 /* Заголовок */
@@ -299,8 +297,8 @@ body {
   margin-left: auto;
   margin-right: auto;
   background-color: #F5F4FA;
-  width: 1600px;
-  height: 780px;
+  /* width: 1600px;
+  height: 780px; */
   padding-top: 94px;
   padding-bottom: 94px;
   /* margin-bottom: 94px; */
@@ -368,10 +366,16 @@ border-radius: 0px 0px 4px 4px;
     justify-content: center;
     align-items: center;
   }
-  .team-soc-link:hover {
+  .team-soc-link:hover,
+  .team-soc-link:focus {
     background-color:#2196F3;
     fill: var(--title-text-color);
-  }
+  } 
+  /* .team-soc-link:focus {
+    background-color:#2196F3;
+    fill: var(--title-text-color);
+  } 
+  */
   /* конец иконок соцсетей */
 
 /* Портфолио */
@@ -454,15 +458,22 @@ line-height: 1.88;
     fill: var(--accent-text-color);
     border: 1px solid var(--accent-text-color);
   }
+  .clients-link:focus {
+    fill: var(--accent-text-color);
+    border: 1px solid var(--accent-text-color);
+  }
+
   .clients-icons {
-    display: block;
+    display: flex;
+    width: 106px;
+    height: 92px;
   } 
 
   
 /* Футер */
 .footer-main {
-  width: 1600px;
-  height: 252px;
+  /* width: 1600px;
+  height: 252px; */
   background-color: #2F303A;
   margin-left: auto;
   margin-right: auto;
@@ -552,5 +563,8 @@ color: var(--title-text-color);
   .footer-soc-link:hover {
     background-color:#2196F3;
     /* fill: #FFFFFF; */
+  }
+  .footer-soc-link:focus {
+    background-color: #2196F3 ;
   }
   
